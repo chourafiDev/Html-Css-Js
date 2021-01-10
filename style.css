@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    background: #0d1440;
+    background: linear-gradient(90deg,#0d1440 0%, #0e2773 80%);
+    background: -webkit-linear-gradient(90deg,#0d1440 0%, #0e2773 80%);
+    background: -moz-linear-gradient(90deg,#0d1440 0%, #0e2773 80%);
+}
+
+h1{
+    color: #ffffff;
+    font-size: 40px;
+    transform: translateY(-50px);
+    text-align: center;
+}
+
+span{
+    color:#1455D9;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #bf1736;
+    background: linear-gradient(95deg,#bf1736 0%, #e04660 80%);
+    background: -webkit-linear-gradient(95deg,#bf1736 0%, #e04660 80%);
+    background: -moz-linear-gradient(95deg,#bf1736 0%, #e04660 80%);
+
+    border-radius: 20px;
+    box-shadow:  7px 7px 26px #060a1f,
+                -7px -7px 26px #141e61;
+    padding: 60px;
+
+    position: relative;
+}
+
+.pass-input{
+    padding: 15px 30px;
+    width: 70%;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 2px solid;
+    outline: none;
+}
+
+p{
+    text-align: center;
+    color: rgb(194, 194, 194);
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.icon{
+    position: absolute;
+    font-size: 2rem;
+    top: 4rem;
+    left: 70%;
+    
+}
+
+.pass-input:valid{
+    border-color: green;
+}
+
+.pass-input:valid + .icon::after{
+    content: '😃';
+}
+
+.pass-input:invalid{
+    border-color: rgb(168, 3, 3);
+}
+
+.pass-input:invalid + .icon::after{
+    content: '😳';
+}
+
+.signature{
+    text-align: center;
+    color: #ffffff;
+    transform: translateY(6rem);
+    font-family: 'Sacramento', cursive;
+    font-size: 35px;
+    font-weight: 200;
+    position: relative;
+}
+
+
+@media only screen and (max-width: 425px){
+    .pass-input{
+        width: 100%;
+    }
+}
+
